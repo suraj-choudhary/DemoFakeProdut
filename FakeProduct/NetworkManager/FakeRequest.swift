@@ -19,6 +19,7 @@ final class FakeRequest {
     private let pathComponents: [String]
     private let queryParameters: [URLQueryItem]
     
+    
     /// Constrcut the url
     private var urlString: String {
         
@@ -42,7 +43,7 @@ final class FakeRequest {
     }
     
     
-    public let httpMethod = "GET"
+    public let httpMethod = FakeHTTPMethod.RawValue()
     
     public var url: URL? {
         return URL(string: urlString)

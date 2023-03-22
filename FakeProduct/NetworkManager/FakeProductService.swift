@@ -20,16 +20,13 @@ final class FakeProductservice {
         case failedToCreateprodut
         case failedToGetProdut
     }
-    
-    
+
     /// Send
     /// - Parameters:
     ///   - request: fake request
     ///   - type: t ype
     ///   - completion: get back to data
     func fakeExecute<T: Codable>(_ request: FakeRequest, expectingType type: T.Type, completion: @escaping(Result<T, Error>) -> Void) {
-        
-        
         guard let fakeUrlRequest = requestApi(from: request) else {
             completion(.failure(FakeSeriveError.failedToCreateRequest))
             return
@@ -67,8 +64,6 @@ final class FakeProductservice {
         
     }
 }
-
-
 extension FakeRequest {
     static let produtList = FakeRequest(endPoint: .products)
 }

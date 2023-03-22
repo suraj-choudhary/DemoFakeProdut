@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 struct ProductListViewModel {
-    
     public func fetchProdut() {
         FakeProductservice.shared.fakeExecute(.produtList, expectingType: FakeProductModel.self) { result in
             switch result {
