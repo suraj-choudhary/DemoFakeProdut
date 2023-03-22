@@ -10,7 +10,6 @@ import UIKit
 class ProductListVC: UITableViewController {
     var productViewModel = ProductListViewModel()
     var dummyData: [FakeProductModel]?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -25,7 +24,6 @@ class ProductListVC: UITableViewController {
         }
     }
 }
-
 //extension of product list
 extension ProductListVC {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,9 +35,6 @@ extension ProductListVC {
         if let data = (self.dummyData?[indexPath.row].title) {
             cell.textLabel?.text = "\(data)"
         }
-       
-    
-       
         return cell
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

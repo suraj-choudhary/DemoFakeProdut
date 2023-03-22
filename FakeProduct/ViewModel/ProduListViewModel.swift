@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 class ProductListViewModel: NSObject {
     
-    
     func fetchProdut(completion: @escaping([FakeProductModel]) -> Void) {
         FakeProductservice.shared.fakeExecute(.produtList, expectingType: [FakeProductModel].self) { result in
             switch result {

@@ -22,7 +22,6 @@ final class FakeRequest {
     
     /// Constrcut the url
     private var urlString: String {
-        
         var urlValue = Constant.baseUrl
         
         urlValue += endPoint.rawValue

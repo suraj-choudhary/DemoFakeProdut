@@ -16,7 +16,6 @@ struct FakeProductModel: Codable {
     let image: String?
     let rating: Rating?
 }
-
 enum Category: String, Codable {
     case electronics = "electronics"
     case jewelery = "jewelery"

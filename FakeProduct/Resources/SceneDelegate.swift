@@ -14,6 +14,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let productListVc = ProductListVC()
         productListVc.title = "Cloths Market"
         let nav = UINavigationController(rootViewController: productListVc)
+        nav.navigationBar.prefersLargeTitles = true
+
         nav.navigationItem.largeTitleDisplayMode = .automatic
         window.rootViewController = nav
         self.window = window
