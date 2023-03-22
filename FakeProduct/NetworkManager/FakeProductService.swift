@@ -59,7 +59,7 @@ final class FakeProductservice {
         }
         var request = URLRequest(url: fakePoductURL)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = fakeRequest.httpMethod
+        request.httpMethod = "GET"
         return request
         
     }

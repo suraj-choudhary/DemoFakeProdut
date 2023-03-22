@@ -10,9 +10,11 @@ import UIKit
 class ProductListVC: UITableViewController {
     
     var productViewModel = ProductListViewModel()
-    var dummyData = [FakeProductservice]()
+    var dummyData: [FakeProductModel]?
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         productViewModel.fetchProdut()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
@@ -20,10 +22,13 @@ class ProductListVC: UITableViewController {
     
 }
 
+
+
+
 //extension of product list
 extension ProductListVC {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return dummyData?.count ?? 0
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
@@ -37,6 +42,3 @@ extension ProductListVC {
     
     
 }
-
-
-

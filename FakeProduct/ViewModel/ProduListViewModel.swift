@@ -8,17 +8,19 @@
 import Foundation
 import UIKit
 struct ProductListViewModel {
-    public func fetchProdut() {
-        FakeProductservice.shared.fakeExecute(.produtList, expectingType: FakeProductModel.self) { result in
+    var produtListview = ProductListVC()
+    func fetchProdut() {
+        FakeProductservice.shared.fakeExecute(.produtList, expectingType: [FakeProductModel].self) { result in
             switch result {
             case .success(let data):
-                print([data])
+                produtListview.dummyData = data
             case .failure(let failure):
-                break
+                print(failure)
             }
         }
     }
 }
+
 
 
 

@@ -11,7 +11,7 @@ struct FakeProductModel: Codable {
     let id: Int?
     let title: String?
     let price: Double?
-    let description: Category?
+//    let description: Category?
     let category: String?
     let image: String?
     let rating: Rating?
