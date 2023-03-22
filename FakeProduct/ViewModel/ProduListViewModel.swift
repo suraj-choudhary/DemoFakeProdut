@@ -7,13 +7,14 @@
 
 import Foundation
 import UIKit
-struct ProductListViewModel {
-    var produtListview = ProductListVC()
-    func fetchProdut() {
+class ProductListViewModel: NSObject {
+    
+    
+    func fetchProdut(completion: @escaping([FakeProductModel]) -> Void) {
         FakeProductservice.shared.fakeExecute(.produtList, expectingType: [FakeProductModel].self) { result in
             switch result {
             case .success(let data):
-                produtListview.dummyData = data
+                completion(data)
             case .failure(let failure):
                 print(failure)
             }

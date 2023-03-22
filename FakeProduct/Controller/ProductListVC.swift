@@ -13,13 +13,16 @@ class ProductListVC: UITableViewController {
     var dummyData: [FakeProductModel]?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-        productViewModel.fetchProdut()
+    
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
-
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        productViewModel.fetchProdut { data in
+            self.dummyData = data
+        }
+    }
 }
 
 
@@ -33,7 +36,8 @@ extension ProductListVC {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.textLabel?.text = "Product List"
+        
+        cell.textLabel?.text = dummyData?[0].title
         return cell
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
