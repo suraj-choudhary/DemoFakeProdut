@@ -8,13 +8,10 @@
 import Foundation
 import UIKit
 struct CharacterCellViewModel {
-    
     private let characterImageUrl: URL?
-    
     init(characterImageUrl: URL?) {
         self.characterImageUrl = characterImageUrl
     }
-     
     
     public func fetchImage(completion: @escaping(Result<Data, Error>) -> Void) {
        

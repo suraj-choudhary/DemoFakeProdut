@@ -22,6 +22,8 @@
 		1733D2FF29CA7A9C00741292 /* FakeListTabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733D2FE29CA7A9C00741292 /* FakeListTabelCell.swift */; };
 		1733D30129CA7BE200741292 /* FakeHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733D30029CA7BE200741292 /* FakeHTTPMethod.swift */; };
 		17946A5429CB9C3E00FC252B /* ProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17946A5329CB9C3E00FC252B /* ProductCellViewModel.swift */; };
+		17946A5629CBA80700FC252B /* PrdouctRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17946A5529CBA80700FC252B /* PrdouctRequestModel.swift */; };
+		17946A5829CBA92000FC252B /* MYProductPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17946A5729CBA92000FC252B /* MYProductPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		1733D2FE29CA7A9C00741292 /* FakeListTabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeListTabelCell.swift; sourceTree = "<group>"; };
 		1733D30029CA7BE200741292 /* FakeHTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeHTTPMethod.swift; sourceTree = "<group>"; };
 		17946A5329CB9C3E00FC252B /* ProductCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewModel.swift; sourceTree = "<group>"; };
+		17946A5529CBA80700FC252B /* PrdouctRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrdouctRequestModel.swift; sourceTree = "<group>"; };
+		17946A5729CBA92000FC252B /* MYProductPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MYProductPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				1733D2F429CA480D00741292 /* FakeProductModel.swift */,
+				17946A5529CBA80700FC252B /* PrdouctRequestModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				1733D2D929CA351100741292 /* ProductListVC.swift */,
+				17946A5729CBA92000FC252B /* MYProductPage.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -223,8 +229,10 @@
 			files = (
 				1733D2F029CA3BFF00741292 /* FakeProductService.swift in Sources */,
 				1733D2EC29CA361400741292 /* FakeRequest.swift in Sources */,
+				17946A5829CBA92000FC252B /* MYProductPage.swift in Sources */,
 				1733D30129CA7BE200741292 /* FakeHTTPMethod.swift in Sources */,
 				1733D2EE29CA36C900741292 /* FackProductEndPoint.swift in Sources */,
+				17946A5629CBA80700FC252B /* PrdouctRequestModel.swift in Sources */,
 				1733D2DA29CA351100741292 /* ProductListVC.swift in Sources */,
 				1733D2F529CA480D00741292 /* FakeProductModel.swift in Sources */,
 				1733D2FD29CA5FC200741292 /* Extension.swift in Sources */,

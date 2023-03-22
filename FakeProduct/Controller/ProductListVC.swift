@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 /// Produt List Controller
 class ProductListVC: UITableViewController {
     var productViewModel = ProductListViewModel()
@@ -56,7 +57,12 @@ extension ProductListVC {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(dummyData![indexPath.row])
+        
+        let maineView = MYProductPage(name: "")
+        let vc = UIHostingController(rootView: maineView)
+        
+        present(vc, animated: true)
+//        print(dummyData![indexPath.row])
         
     }
 }

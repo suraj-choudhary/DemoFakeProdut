@@ -16,7 +16,6 @@ class FakeListTableCell: UITableViewCell {
     
     public let produtImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .red
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
         
@@ -27,8 +26,7 @@ class FakeListTableCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         ListConstarinst()
     }
-    
-    
+
     func ListConstarinst() {
         productName.layer.cornerRadius = 10
         productName.layer.masksToBounds = true
