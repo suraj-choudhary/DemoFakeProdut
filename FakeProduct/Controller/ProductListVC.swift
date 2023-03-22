@@ -12,7 +12,7 @@ class ProductListVC: UITableViewController {
     var dummyData: [FakeProductModel]?
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(FakeListTableCell.self, forCellReuseIdentifier: "cell")
     }
     override func viewWillAppear(_ animated: Bool) {
         productViewModel.fetchProdut { data in
@@ -30,14 +30,33 @@ extension ProductListVC {
         return dummyData?.count ?? 0
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        if let data = (self.dummyData?[indexPath.row].title) {
-            cell.textLabel?.text = "\(data)"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? FakeListTableCell else {
+            fatalError()
         }
+        let url = dummyData?[indexPath.row].image
+        let viewModel = CharacterCellViewModel(characterImageUrl: URL(string: url!))
+        viewModel.fetchImage { result in
+            switch result {
+            case .success(let data):
+                DispatchQueue.main.async {
+                    let image = UIImage(data: data)
+                    cell.produtImageView.image = image
+                }
+                
+            case .failure(let failure):
+                break
+            }
+        }
+        cell.productName.text = dummyData?[indexPath.row].title?.capitalized
         return cell
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 300
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(dummyData![indexPath.row])
+        
     }
 }

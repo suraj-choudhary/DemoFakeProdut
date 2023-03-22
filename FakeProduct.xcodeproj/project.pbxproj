@@ -21,6 +21,7 @@
 		1733D2FD29CA5FC200741292 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733D2FC29CA5FC200741292 /* Extension.swift */; };
 		1733D2FF29CA7A9C00741292 /* FakeListTabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733D2FE29CA7A9C00741292 /* FakeListTabelCell.swift */; };
 		1733D30129CA7BE200741292 /* FakeHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733D30029CA7BE200741292 /* FakeHTTPMethod.swift */; };
+		17946A5429CB9C3E00FC252B /* ProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17946A5329CB9C3E00FC252B /* ProductCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		1733D2FC29CA5FC200741292 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		1733D2FE29CA7A9C00741292 /* FakeListTabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeListTabelCell.swift; sourceTree = "<group>"; };
 		1733D30029CA7BE200741292 /* FakeHTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeHTTPMethod.swift; sourceTree = "<group>"; };
+		17946A5329CB9C3E00FC252B /* ProductCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				1733D2F629CA573A00741292 /* ProduListViewModel.swift */,
+				17946A5329CB9C3E00FC252B /* ProductCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				1733D2F729CA573A00741292 /* ProduListViewModel.swift in Sources */,
 				1733D2FF29CA7A9C00741292 /* FakeListTabelCell.swift in Sources */,
 				1733D2D629CA351100741292 /* AppDelegate.swift in Sources */,
+				17946A5429CB9C3E00FC252B /* ProductCellViewModel.swift in Sources */,
 				1733D2D829CA351100741292 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
